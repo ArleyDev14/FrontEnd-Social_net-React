@@ -1,0 +1,541 @@
+/* Variables globales */
+:root {
+  --primary-color: #0095f6;
+  --primary-hover: #0074cc;
+  --danger-color: #dc3545;
+  --text-primary: #333;
+  --text-secondary: #666;
+  --bg-primary: #ffffff;
+  --bg-secondary: #fafafa;
+  --border-radius-sm: 6px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --transition-base: all 0.2s ease;
+  --like-color: #ed4956;
+  --comment-bg: #f8f9fa;
+  --divider-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar mejorado */
+.p-navbar {
+  background-color: var(--bg-primary);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.p-nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-nav-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  background: linear-gradient(45deg, var(--primary-color), #00b4d8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.p-nav-button {
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+  border: none;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.p-nav-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* Contenedor y tarjeta de perfil */
+.p-container {
+  background-color: var(--bg-secondary);
+  min-height: 100vh;
+}
+
+.p-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.p-card {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+}
+
+.p-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Perfil header */
+.p-header {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.p-image-container {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  overflow: hidden;
+  flex-shrink: 0;
+  border: 3px solid var(--primary-color);
+  padding: 3px;
+}
+
+.p-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: var(--transition-base);
+}
+
+.p-image:hover {
+  transform: scale(1.05);
+}
+
+/* Información del perfil */
+.p-info {
+  flex: 1;
+}
+
+.p-name {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.p-username {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.p-bio {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+/* Estadísticas mejoradas */
+.p-stats {
+  display: flex;
+  gap: 3rem;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.p-stat-item {
+  text-align: center;
+  transition: var(--transition-base);
+}
+
+.p-stat-item:hover {
+  transform: translateY(-2px);
+}
+
+.p-stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.p-stat-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+
+/* Botones de acción */
+.p-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.p-edit-button,
+.p-delete-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-base);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.p-edit-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+.p-edit-button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.p-delete-button {
+  background-color: transparent;
+  color: var(--danger-color);
+  border: 1px solid var(--danger-color);
+}
+
+.p-delete-button:hover {
+  background-color: var(--danger-color);
+  color: white;
+  transform: translateY(-1px);
+}
+
+/* Modal mejorado */
+.p-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+}
+
+.p-modal-container {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Formulario mejorado */
+.p-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.p-form-group label {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.p-form-group input,
+.p-form-group textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  transition: var(--transition-base);
+}
+
+.p-form-group input:focus,
+.p-form-group textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 149, 246, 0.1);
+}
+
+/* Grid de publicaciones mejorado */
+.p-posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.p-post-card {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-base);
+}
+
+.p-post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .p-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .p-stats {
+    justify-content: center;
+  }
+  
+  .p-actions {
+    justify-content: center;
+  }
+  
+  .p-nav-content {
+    padding: 1rem;
+  }
+  
+  .p-wrapper {
+    padding: 1rem;
+  }
+}
+
+/* Estilos mejorados para las publicaciones */
+.p-post {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 2rem;
+  transition: var(--transition-base);
+}
+
+.p-post:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.p-post-image {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+
+/* Contenido de la publicación */
+.p-post-content {
+  padding: 1rem;
+}
+
+.p-post-caption {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Acciones de la publicación */
+.p-post-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.5rem 1rem;
+  border-top: 1px solid var(--divider-color);
+}
+
+/* Botones de interacción */
+.p-interaction-button {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+/* Estilo específico para el botón de like */
+.p-like-button {
+  color: var(--text-secondary);
+}
+
+.p-like-button.active {
+  color: var(--like-color);
+}
+
+.p-like-button:hover {
+  transform: scale(1.1);
+}
+
+.p-like-count {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* Estilo para el botón de comentarios */
+.p-comment-button:hover {
+  color: var(--primary-color);
+  transform: scale(1.1);
+}
+
+/* Área de comentarios en la publicación */
+.p-comments-preview {
+  padding: 1rem;
+  border-top: 1px solid var(--divider-color);
+  background-color: var(--comment-bg);
+}
+
+.p-comment-input-container {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-sm);
+  border: 1px solid var(--divider-color);
+}
+
+.p-comment-input {
+  flex: 1;
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.95rem;
+  background: none;
+}
+
+.p-comment-input:focus {
+  outline: none;
+}
+
+.p-comment-submit {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.p-comment-submit:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Modal de comentarios */
+.p-comments-modal {
+  background-color: var(--bg-primary);
+  border-radius: var(--border-radius-lg);
+  width: 90%;
+  max-width: 600px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.p-comments-modal-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--divider-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.p-comments-modal-title {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.p-comments-list {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.p-comment-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid var(--divider-color);
+}
+
+.p-comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.p-comment-content {
+  flex: 1;
+}
+
+.p-comment-user {
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.p-comment-text {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.p-comment-metadata {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.p-comment-date {
+  color: var(--text-secondary);
+}
+
+.p-comment-like {
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.p-comment-like:hover {
+  color: var(--like-color);
+}
+
+/* Formulario de comentarios en el modal */
+.p-comments-form {
+  padding: 1rem;
+  border-top: 1px solid var(--divider-color);
+  background-color: var(--bg-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .p-comments-modal {
+    width: 100%;
+    height: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+  
+  .p-post-actions {
+    padding: 0.5rem;
+  }
+}
