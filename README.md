@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+###### 🛸AsmvProject🛸
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+# Bienvenido al Frontend de Social_Net 👽️
+⚠️➡︎ Frontend realizado con react para el aplicativo web Social_net
 
-## Available Scripts
+---
+## Tabla de contenidos 📋
 
-In the project directory, you can run:
+- [Instalación](#Instalación) 
+- [¿Como usar?](#Como_usar) 
+- [Tecnologías usadas](#Tecnologías)
+- [Funcionalidad](#Funcionalidad)
+- [Autor/es](#Autor)
+- [Otros (Archivos, evidencias)](#Otros)
+---
+## 👽️Hecho por:
+- [Arley Mantilla](#Autor)
+- [AsmvProjects](#AsmvProjects)
 
-### `npm start`
+---
+## Instalación📂
+> [!TIP]
+>Sigue cada uno de los siguientes pasos sin saltarte ningúno para la correcta instalación
+- Instala React
+- Instala el BackEnd de Social_net -> [Repositorio](https://github.com/ArleyDev14/Backend-Social_Net-SpringBoot---PostgreSQL.git)
+---
+## Como_usar💼
+> [!WARNING]
+>Recuerda activar el puerto 8082, si no, no se conectará el front con el back por temas de seguridad.
+- Abre la terminal
+- Ve a la carpeta madre del directorio SRC
+- Ingresa : `PORT=8082 npm start`
+---
+## Tecnologías📱
+- React.js
+- VsCode 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+## Funcionalidad💭
+> [!IMPORTANT]  
+> Funcionalidades educativas únicamente
+- Visualizar la parte de diseño del aplicativo web Social_Net
+---
+## Otros🔨
+- [Repositorio del BackEnd](https://github.com/ArleyDev14/Backend-Social_Net-SpringBoot---PostgreSQL.git)
+---
+## Autor👨‍💻
+#### "Codifica tus sueños"
+> Arley Mantilla
+- Email : 		Arleydev14@gmail.com
+- LinkedIn : 	www.linkedin.com/in/arleydev14
+- GitHub :		https://github.com/ArleyDev14
